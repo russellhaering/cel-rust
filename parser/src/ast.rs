@@ -68,11 +68,11 @@ pub enum Atom {
 
 #[cfg(test)]
 mod tests {
-    use crate::parser::ExpressionParser;
+    use crate::parser::ExprParser;
     use crate::{Atom::*, Expression, Expression::*, Member::*};
 
     fn parse(input: &str) -> Expression {
-        ExpressionParser::new()
+        ExprParser::new()
             .parse(input)
             .unwrap_or_else(|e| panic!("{}", e))
     }
